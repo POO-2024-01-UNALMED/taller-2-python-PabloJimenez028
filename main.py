@@ -10,9 +10,7 @@ class Asiento:
         listaColores = ["rojo","verde","amarillo","negro","blanco"]
         if nuevoColor in listaColores:
             self.color = nuevoColor
-        else:
-            print("Color Inválido")
-        return nuevoColor
+
 
 class Auto:
     cantidadCreados = 0
@@ -25,7 +23,7 @@ class Auto:
         self.registro = registro
         
 
-    def cantidadAsientos(self, numeroasiento):
+    def cantidadAsientos(self):
         i = 0
         for e in self.asiento:
             if i != None:
