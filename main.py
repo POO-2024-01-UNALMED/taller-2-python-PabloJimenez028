@@ -1,7 +1,7 @@
 
 
 class Asiento:
-    def __init__(self, precio, color, registro):
+    def __init__(self, color, precio, registro):
         self.color = color
         self.precio = precio
         self.registro = registro
@@ -12,7 +12,7 @@ class Asiento:
             self.color = nuevoColor
 
 class Auto:
-    cantidadCreados = 0
+    cantidadCreados = int
     def __init__(self, modelo, precio, asiento, marca, motor, registro):
         self.modelo = modelo
         self.precio = precio
@@ -25,7 +25,7 @@ class Auto:
     def cantidadAsientos(self):
         i = 0
         for e in self.asiento:
-            if i != None:
+            if i != None and isinstance(i, Asiento):
                 i +=1
         return i
 
@@ -68,3 +68,13 @@ class Motor:
             self.tipo = nuevotipo
         else:
             print("tipo inválido")
+
+
+
+
+a1 = Asiento("blanco", 5000, 435)
+a2 = Asiento("blanco", 5000, 435)
+      
+a1.cambiarColor("naranja")
+a2.cambiarColor("verde")
+print (a1.color,a2.color)
