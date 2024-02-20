@@ -24,9 +24,9 @@ class Auto:
 
     def cantidadAsientos(self):
         i = 0
-        for e in self.asiento:
+        for asiento in self.asiento:
             if i != None and isinstance(i, Asiento):
-                i +=1
+                i += 1
         return i
 
 
@@ -42,6 +42,8 @@ class Auto:
                     
                 else:
                     return "Las piezas no son originales"
+            else:
+                continue
         return "Auto original"
 
 
