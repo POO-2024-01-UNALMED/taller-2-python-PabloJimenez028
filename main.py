@@ -30,14 +30,10 @@ class Auto:
         return i
 
 
-    
-
-
     def verificarIntegridad(self):
-        i = 0
         for i in self.asientos:
-            if i != None:
-                if i == self.registro and i == self.motor.registro:
+            if i.registro != None:
+                if i.registro == self.registro and i == self.motor.registro:
                     verificacionasiento = True
                     
                 else:
