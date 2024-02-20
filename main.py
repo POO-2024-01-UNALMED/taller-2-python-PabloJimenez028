@@ -31,21 +31,14 @@ class Auto:
 
 
     def verificarIntegridad(self):
-        for i in self.asientos:
-            if i.registro != None:
-                if i.registro == self.registro and i == self.motor.registro:
-                    verificacionasiento = True
-                    
-                else:
+            for i in self.asientos:
+                if i == None:
+                    continue
+
+                if i.registro != self.registro or i.registro != self.motor.registro:
                     return "Las piezas no son originales"
-            else:
-                continue
-        return "Auto original"
 
-
-
-
-
+            return "Auto original"
         
                 
        
@@ -66,13 +59,3 @@ class Motor:
             self.tipo = nuevotipo
         else:
             print("tipo inválido")
-
-
-
-
-a1 = Asiento("blanco", 5000, 435)
-a2 = Asiento("blanco", 5000, 435)
-      
-a1.cambiarColor("naranja")
-a2.cambiarColor("verde")
-print (a1.color,a2.color)
