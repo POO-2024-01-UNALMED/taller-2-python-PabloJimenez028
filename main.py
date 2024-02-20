@@ -6,11 +6,10 @@ class Asiento:
         self.precio = precio
         self.registro = registro
 
-    def cambiarColor(self, nuevoColor):
+    def cambiarColor(self, nuevoColor:str):
         listaColores = ["rojo","verde","amarillo","negro","blanco"]
         if nuevoColor in listaColores:
             self.color = nuevoColor
-
 
 class Auto:
     cantidadCreados = 0
